@@ -90,20 +90,3 @@ python main.py analysis
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🖊️ Citation
-
-If you find this code useful in your research, please cite:
-
-```bibtex
-@software{EduRiskX_2026,
-  author       = {Yu Fu},
-  title        = {EduRiskX: Neuro-Symbolic Student Risk Prediction Framework},
-  month        = feb,
-  year         = 2026,
-  publisher    = {Zenodo},
-  version      = {v1.0.0},
-  doi          = {10.5281/zenodo.18637901},
-  url          = {https://doi.org/10.5281/zenodo.18637901}
-}
-```
