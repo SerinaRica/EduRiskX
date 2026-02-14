@@ -1,0 +1,21 @@
+{
+  "num_rows": 29741,
+  "num_columns": 11,
+  "columns": [
+    "id_student",
+    "week",
+    "total_clicks",
+    "days_active",
+    "unique_resources",
+    "avg_clicks_per_day",
+    "clicks_trend_3w",
+    "activity_trend_3w",
+    "is_risk",
+    "clicks_per_resource",
+    "activity_consistency"
+  ],
+  "risk_distribution": {
+    "0.0": 15382,
+    "1.0": 14359
+  }
+}

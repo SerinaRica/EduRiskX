@@ -1,0 +1,258 @@
+[
+  {
+    "rule_type": "TemporalSequenceRule",
+    "name": "Temporal Trend Risk Rule: activity_trend_3w declining trend",
+    "condition": "activity_trend_3w < 0 consecutive decline >= 1 time",
+    "condition_features": [
+      "activity"
+    ],
+    "confidence": 0.85,
+    "support": 0.907,
+    "affected_students": 23661,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.2240000069141388,
+    "theory_rationale": "Aligned with Engagement Theory, the activity feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TEMP001",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.85] :-\n    Student(S) AND activity_trend_3w < 0 consecutive decline >= 1 time AND theory_alignment(S, 'Engagement', 0.2240000069141388)."
+  },
+  {
+    "rule_type": "TemporalSequenceRule",
+    "name": "Click Decline Sequence Rule: clicks_forum continuous decline",
+    "condition": "clicks_forum declines in consecutive periods",
+    "condition_features": [
+      "clicks_forum"
+    ],
+    "confidence": 0.85,
+    "support": 0.779,
+    "affected_students": 20310,
+    "theory_aligned": "StudentIntegration",
+    "theory_alignment_score": 0.20900000631809235,
+    "theory_rationale": "Aligned with Student Integration Model, the clicks_forum feature(s) reflect(s) social-academic integration; low engagement signal(s) lack of integration.",
+    "rule_id": "TEMP002",
+    "f_logic_rule": "Student(S) [risk -> studentintegration_risk, confidence -> 0.85] :-\n    Student(S) AND clicks_forum declines in consecutive periods AND theory_alignment(S, 'StudentIntegration', 0.20900000631809235)."
+  },
+  {
+    "rule_type": "TemporalSequenceRule",
+    "name": "Click Decline Sequence Rule: total_clicks continuous decline",
+    "condition": "total_clicks declines in consecutive periods",
+    "condition_features": [
+      "total_clicks"
+    ],
+    "confidence": 0.85,
+    "support": 0.864,
+    "affected_students": 22524,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.1459999978542328,
+    "theory_rationale": "Aligned with Engagement Theory, the total_clicks feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TEMP004",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.85] :-\n    Student(S) AND total_clicks declines in consecutive periods AND theory_alignment(S, 'Engagement', 0.1459999978542328)."
+  },
+  {
+    "rule_type": "TemporalSequenceRule",
+    "name": "Click Decline Sequence Rule: clicks_resource continuous decline",
+    "condition": "clicks_resource declines in consecutive periods",
+    "condition_features": [
+      "clicks_resource"
+    ],
+    "confidence": 0.833,
+    "support": 0.821,
+    "affected_students": 21415,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.11100000143051147,
+    "theory_rationale": "Aligned with Engagement Theory, the clicks_resource feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TEMP003",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.833] :-\n    Student(S) AND clicks_resource declines in consecutive periods AND theory_alignment(S, 'Engagement', 0.11100000143051147)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: activity_density Low Value Period",
+    "condition": "week ∈ [0,4] & activity_density ≤ 0.0",
+    "condition_features": [
+      "activity_density"
+    ],
+    "confidence": 0.524,
+    "support": 0.281,
+    "affected_students": 30020,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.16899999976158142,
+    "theory_rationale": "Aligned with Engagement Theory, the activity_density feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW015",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.524] :-\n    Student(S) AND week ∈ [0,4] AND activity_density ≤ 0.0 AND theory_alignment(S, 'Engagement', 0.16899999976158142)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: forum_activity Low Value Period",
+    "condition": "week ∈ [0,4] & forum_activity ≤ 0.0",
+    "condition_features": [
+      "forum_activity"
+    ],
+    "confidence": 0.52,
+    "support": 0.3,
+    "affected_students": 32041,
+    "theory_aligned": "StudentIntegration",
+    "theory_alignment_score": 0.2529999911785126,
+    "theory_rationale": "Aligned with Student Integration Model, the forum_activity feature(s) reflect(s) social-academic integration; low engagement signal(s) lack of integration.",
+    "rule_id": "TW028",
+    "f_logic_rule": "Student(S) [risk -> studentintegration_risk, confidence -> 0.52] :-\n    Student(S) AND week ∈ [0,4] AND forum_activity ≤ 0.0 AND theory_alignment(S, 'StudentIntegration', 0.2529999911785126)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: other Low Value Period",
+    "condition": "week ∈ [0,4] & other ≤ 12.0",
+    "condition_features": [
+      "other"
+    ],
+    "confidence": 0.502,
+    "support": 0.253,
+    "affected_students": 26957,
+    "theory_aligned": "StudentIntegration",
+    "theory_alignment_score": 0.0820000022649765,
+    "theory_rationale": "Aligned with Student Integration Model, the other feature(s) reflect(s) social-academic integration; low engagement signal(s) lack of integration.",
+    "rule_id": "TW003",
+    "f_logic_rule": "Student(S) [risk -> studentintegration_risk, confidence -> 0.502] :-\n    Student(S) AND week ∈ [0,4] AND other ≤ 12.0 AND theory_alignment(S, 'StudentIntegration', 0.0820000022649765)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: activity_trend_3w Moderate Fluctuation",
+    "condition": "week ∈ [0,4] & -0.0 ≤ activity_trend_3w ≤ 0.0",
+    "condition_features": [
+      "activity_trend_3w"
+    ],
+    "confidence": 0.474,
+    "support": 0.412,
+    "affected_students": 44019,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.1889999955892563,
+    "theory_rationale": "Aligned with Engagement Theory, the activity_trend_3w feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW018",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.474] :-\n    Student(S) AND week ∈ [0,4] AND -0.0 ≤ activity_trend_3w ≤ 0.0 AND theory_alignment(S, 'Engagement', 0.1889999955892563)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: activity_consistency Low Value Period",
+    "condition": "week ∈ [0,4] & activity_consistency ≤ 1.0",
+    "condition_features": [
+      "activity_consistency"
+    ],
+    "confidence": 0.468,
+    "support": 0.342,
+    "affected_students": 36490,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.3630000054836273,
+    "theory_rationale": "Aligned with Engagement Theory, the activity_consistency feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW019",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.468] :-\n    Student(S) AND week ∈ [0,4] AND activity_consistency ≤ 1.0 AND theory_alignment(S, 'Engagement', 0.3630000054836273)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: content_views Low Value Period",
+    "condition": "week ∈ [0,4] & content_views ≤ 0.0",
+    "condition_features": [
+      "content_views"
+    ],
+    "confidence": 0.452,
+    "support": 0.388,
+    "affected_students": 41467,
+    "theory_aligned": "StudentIntegration",
+    "theory_alignment_score": 0.09300000220537186,
+    "theory_rationale": "Aligned with Student Integration Model, the content_views feature(s) reflect(s) social-academic integration; low engagement signal(s) lack of integration.",
+    "rule_id": "TW009",
+    "f_logic_rule": "Student(S) [risk -> studentintegration_risk, confidence -> 0.452] :-\n    Student(S) AND week ∈ [0,4] AND content_views ≤ 0.0 AND theory_alignment(S, 'StudentIntegration', 0.09300000220537186)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: days_active Low Value Period",
+    "condition": "week ∈ [0,4] & days_active ≤ 0.0",
+    "condition_features": [
+      "days_active"
+    ],
+    "confidence": 0.452,
+    "support": 0.388,
+    "affected_students": 41467,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.28200000524520874,
+    "theory_rationale": "Aligned with Engagement Theory, the days_active feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW013",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.452] :-\n    Student(S) AND week ∈ [0,4] AND days_active ≤ 0.0 AND theory_alignment(S, 'Engagement', 0.28200000524520874)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: avg_score Low Value Period",
+    "condition": "week ∈ [0,4] & avg_score ≤ 0.0",
+    "condition_features": [
+      "avg_score"
+    ],
+    "confidence": 0.441,
+    "support": 0.764,
+    "affected_students": 81555,
+    "theory_aligned": "SelfEfficacy",
+    "theory_alignment_score": 0.17299999296665192,
+    "theory_rationale": "Aligned with Self-Efficacy Theory, the avg_score feature(s) reflect(s) task competence; low engagement indicate(s) low self-efficacy.",
+    "rule_id": "TW024",
+    "f_logic_rule": "Student(S) [risk -> selfefficacy_risk, confidence -> 0.441] :-\n    Student(S) AND week ∈ [0,4] AND avg_score ≤ 0.0 AND theory_alignment(S, 'SelfEfficacy', 0.17299999296665192)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: clicks_content Low Value Period",
+    "condition": "week ∈ [0,4] & clicks_content ≤ 0.0",
+    "condition_features": [
+      "clicks_content"
+    ],
+    "confidence": 0.438,
+    "support": 1.0,
+    "affected_students": 106760,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.10000000149011612,
+    "theory_rationale": "Aligned with Engagement Theory, the clicks_content feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW007",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.438] :-\n    Student(S) AND week ∈ [0,4] AND clicks_content ≤ 0.0 AND theory_alignment(S, 'Engagement', 0.10000000149011612)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: submission_delay High Value Period",
+    "condition": "week ∈ [0,4] & submission_delay ≥ 0.0",
+    "condition_features": [
+      "submission_delay"
+    ],
+    "confidence": 0.438,
+    "support": 1.0,
+    "affected_students": 106760,
+    "theory_aligned": "SelfEfficacy",
+    "theory_alignment_score": 0.14399999380111694,
+    "theory_rationale": "Aligned with Self-Efficacy Theory, the submission_delay feature(s) reflect(s) task competence; low engagement indicate(s) low self-efficacy.",
+    "rule_id": "TW022",
+    "f_logic_rule": "Student(S) [risk -> selfefficacy_risk, confidence -> 0.438] :-\n    Student(S) AND week ∈ [0,4] AND submission_delay ≥ 0.0 AND theory_alignment(S, 'SelfEfficacy', 0.14399999380111694)."
+  },
+  {
+    "rule_type": "TimeWindowRule",
+    "name": "early Phase Risk Rule: score_trend Low Value Period",
+    "condition": "week ∈ [0,4] & score_trend ≤ 0.0",
+    "condition_features": [
+      "score_trend"
+    ],
+    "confidence": 0.438,
+    "support": 0.973,
+    "affected_students": 103908,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.07800000160932541,
+    "theory_rationale": "Aligned with Engagement Theory, the score_trend feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "TW026",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.438] :-\n    Student(S) AND week ∈ [0,4] AND score_trend ≤ 0.0 AND theory_alignment(S, 'Engagement', 0.07800000160932541)."
+  },
+  {
+    "rule_type": "StaticPatternRule",
+    "name": "Single Feature Risk Rule: total_clicks_cat=VL",
+    "condition": "total_clicks_cat == 'VL'",
+    "condition_features": [
+      "total_clicks_cat"
+    ],
+    "confidence": 0.312,
+    "support": 0.611,
+    "affected_students": 331923,
+    "theory_aligned": "Engagement",
+    "theory_alignment_score": 0.1459999978542328,
+    "theory_rationale": "Aligned with Engagement Theory, the total_clicks feature(s) reflect(s) participation continuity; low engagement signal(s) insufficient participation.",
+    "rule_id": "STAT001",
+    "f_logic_rule": "Student(S) [risk -> engagement_risk, confidence -> 0.312] :-\n    Student(S) AND total_clicks_cat == 'VL' AND theory_alignment(S, 'Engagement', 0.1459999978542328)."
+  }
+]

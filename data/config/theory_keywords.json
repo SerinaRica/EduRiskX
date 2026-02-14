@@ -1,0 +1,20 @@
+{
+  "Engagement": {
+    "description": "Fredricks et al. (2004) Behavioral Engagement Theory",
+    "core_constructs": ["behavioral_engagement", "activity_consistency", "participation", "persistence"],
+    "feature_keywords": ["total_clicks", "content_clicks", "days_active", "activity_intensity", "content_participation_ratio", "active", "clicks", "participation"],
+    "risk_indicators": ["decline", "inactive", "low_intensity", "zero_clicks"]
+  },
+  "SelfEfficacy": {
+    "description": "Bandura (1997) Self-Efficacy Theory",
+    "core_constructs": ["task_persistence", "confidence", "competence", "avoidance"],
+    "feature_keywords": ["avg_score", "score_trend_3w", "late_submissions", "total_submissions", "score", "submission", "late"],
+    "risk_indicators": ["score_declining", "frequent_late", "low_score", "zero_submissions"]
+  },
+  "StudentIntegration": {
+    "description": "Tinto (1975) Student Integration Model",
+    "core_constructs": ["social_integration", "academic_belonging", "community_participation"],
+    "feature_keywords": ["forum_clicks", "forum_days", "social_interaction", "forum"],
+    "risk_indicators": ["zero_forum", "social_isolation"]
+  }
+}
